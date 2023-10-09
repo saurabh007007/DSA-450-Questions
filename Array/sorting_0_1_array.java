@@ -1,43 +1,29 @@
 //Sorting o 1 alogo without using any of the sorting methord
 
 public class sorting_0_1_array {
-    public static void sort012(int[] arr) {
-        int lower = 0;
-        int upper = arr.length - 1;
-        int mid = 0;
-
-        while (mid <= upper) {
-            switch (arr[mid]) {
-                case 0:
-                    swap(arr, lower, mid);
-                    lower++;
-                    
-                    mid++;
-                    break;
-                case 1:
-                    mid++;
-                    break;
-                case 2:
-                    swap(arr, mid, upper);
-                    upper--;
-                    break;
-            }
-        }
-    }
-
-    static void swap(int[] arr, int i, int j) {
-        int temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
-    }
-
-    public static void main(String[] args) {
-        int[] arr = {0, 1, 2, 1, 2, 0, 1, 2, 0};
-        sort012(arr);
-
-        System.out.println("Sorted Array: ");
-       for (int num=0;num<arr.length;num++){
-         System.out.println(arr[num]);
-        }
-    }
+  public static void main(String arg[]){
+      int arr[]={1,0,2,0,1,0,0,2,1,0};
+      int a=0,b=0,c=0;
+      for(int i=0;i<arr.length;i++){
+          if(arr[i]==0){
+              a++;
+          }
+          else if(arr[i]==1){
+              b++;
+          }
+          else{
+              c++;
+          }
+      }
+      int k=0;
+      for(int i=0;i<a;i++) arr[k++]=0;
+      for(int j=0;j<b;j++) arr[k++]=1;
+      for (int i=0;i<c;i++) arr[k++]=2;
+System.out.println("Array be:");
+      for(int i=0;i<arr.length;i++)
+          {
+              System.out.print(" "+arr[i]);
+          }
+      
+  }
 }
