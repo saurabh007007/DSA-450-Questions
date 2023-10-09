@@ -2,23 +2,24 @@
 
 public class sorting_0_1_array {
     public static void sort012(int[] arr) {
-        int low = 0;
-        int high = arr.length - 1;
+        int lower = 0;
+        int upper = arr.length - 1;
         int mid = 0;
 
-        while (mid <= high) {
+        while (mid <= upper) {
             switch (arr[mid]) {
                 case 0:
-                    swap(arr, low, mid);
-                    low++;
+                    swap(arr, lower, mid);
+                    lower++;
+                    
                     mid++;
                     break;
                 case 1:
                     mid++;
                     break;
                 case 2:
-                    swap(arr, mid, high);
-                    high--;
+                    swap(arr, mid, upper);
+                    upper--;
                     break;
             }
         }
